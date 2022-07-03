@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js" defer></script>
+    <title>DashBoard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!-- SideBar Navigation-->
+    <div>
+        <nav class="sidebar">
+            <a href="#" class="brand">
+                <h1>Social Media Tracker</h1>
+            </a>
+        <ul>
+            <li>
+                <a href="">
+                  <i class="fas fa-circle-notch"></i>
+                    <span>Overview</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                  <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                  <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                  <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                  <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                  <i class="fab fa-youtube"></i>
+                   <span>YouTube</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                  <i class="fab fa-tiktok"></i>
+                    <span>Tit Tok</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="help">
+            <li>
+                <a href="">
+                    <i class="fas fa-question"></i>
+                    <span>Help</span>
+                </a>
+            </li>
+        </ul>
+        </nav>
+    </div>
+
+    <!-- Main Navigation-->
+    <main>
+        <nav class="navbar">
+            <div class="input-wrap panel">
+                <i class="fas fa-search"></i>
+                <input type="search" name="" id="" placeholder="Search">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <i class="fas fa-moon" id="darkToggle"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-cog"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-bell"></i>
+                    </li>
+                </ul>
+                <div class="profile panel">
+                    <div>
+                        <img src="images/profile.jpg" alt="">
+                        <span>Mercedez Williams</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="dash">
+            <div class="stats">
+                <h1 class="title">Instagram</h1>
+                <div class="overview">
+                    <div class="panel">
+                        <div>
+                            <div class="icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>2,5667</h2>
+                            <small>Weekly Followers</small>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div>
+                            <div class="icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>32,452</h2>
+                            <small>Weekly Likes</small>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div>
+                            <div class="icon">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>8,542</h2>
+                            <small>Weekly Comments</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <div class="profile-card panel">
+                        <img src="images/profile.jpg" alt="user">
+                        <h3>Mercedez Williams</h3>
+                        <small>UI Designer</small>
+                        <p>
+                            Passionate about catpuring all of life's important occassions
+                        </p>
+                        <a href="#">
+                            <b>www.mercedezwilliams.com</b>
+                        </a>
+                        <p>Austin, TX</p>
+                        <div class="profile-stats">
+                            <div>
+                                <h2>402</h2>
+                                <small>Post</small>
+                            </div>
+                            <div>
+                                <h2>14k</h2>
+                                <small>Followers</small>
+                            </div>
+                            <div>
+                                <h2>423</h2>
+                                <small>Following</small>
+                            </div>
+                        </div><!--profile-stats-->
+                    </div><!--profile-card panel-->
+                    <div class="panel chart-container">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div><!--user-info-->
+                <div class="gallery">
+                    <img src="images/img1.jpg" alt="">
+                    <img src="images/img2.jpg" alt="">
+                    <img src="images/img3.jpg" alt="">
+                    <div class="thumbnails">
+                        <img src="images/img4.jpg" alt="">
+                        <img src="images/img5.jpg" alt="">
+                        <img src="images/img6.png" alt="">
+                        <img src="images/img7.jpg" alt="">
+                    </div>
+                </div><!--gallery-->
+            </div><!--stats-->
+            <div class="activities">
+                <div class="activities-header">
+                    <h3>Activities</h3>
+                    <a href="#">Sell all</a>
+                </div>
+                <div class="post panel">
+                    <div class="post-header">
+                        <img src="images/user1.jpg" alt="user" class="user-image">
+                        <div>
+                            <h4>Michael Smith</h4>
+                            <small>commented on your photos</small>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>"Great work deserves appreciations.This is so amazing"</p>
+                        <img src="images/img1.jpg" alt="" class="photo">
+                    </div>
+                    <div>
+                        <small>1 hr ago</small>
+                        <div>
+                            <button><i class="fas fa-heart"></i></button>
+                            <button><i class="fas fa-share"></i></button>
+                            <button><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post panel">
+                    <div class="post-header">
+                        <img src="images/user2.jpeg" alt="" class="user-image">
+                        <div>
+                            <h4>Sandra Boateng</h4>
+                            <small>commented on your photo</small>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>"I've tried that when i first noticed it, but will try again. Thank you!"</p>
+                        <img src="images/img2.jpg" alt="" class="photo">
+                    </div>
+                    <div>
+                        <small>2 hrs ago</small>
+                        <div>
+                            <button><i class="fas fa-heart"></i></button>
+                            <button><i class="fas fa-share"></i></button>
+                            <button><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post panel">
+                    <div class="post-header">
+                        <img src="images/user3.jpg" alt="" class="user-image">
+                        <div>
+                            <h4>Jacob Bale</h4>
+                            <small>commented on your photo</small>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>"There is something to smash your head over!</p>
+                        <img src="images/img3.jpg" alt="" class="photo">
+                    </div>
+                    <div>
+                        <small>3 hrs ago</small>
+                        <div>
+                            <button><i class="fas fa-heart"></i></button>
+                            <button><i class="fas fa-share"></i></button>
+                            <button><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Theme Colors</h3>
+                    <ul class="colors">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--dash-->
+    </main>
+</body>
+</html>
